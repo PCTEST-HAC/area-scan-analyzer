@@ -1,4 +1,4 @@
-# T-Coil Area Scan Data - Analysis and Visualization Toolkit
+# T-Coil Evaluation Program - Analysis and Visualization Toolkit
 This project was built to facilitate the analysis and visualization of T-Coil area scan results. The program takes ‘.txt’ data files from the T-Coil area scans and generates plots/tables displaying the data and analysis results. The generated results and figures can be exported into ‘.xlsx’ Excel files and separate ‘.png’ image files.
 
 The project was developed in Python 3.6.
