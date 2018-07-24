@@ -27,18 +27,18 @@ Note: the following steps will show how to set up the environment using Anaconda
 
 3.	We will now install the different packages required to run the scripts.
   * Open ***Anaconda Navigator*** and click on ***Environments*** tab on the left.
-[docs/anaconda.png] 
+  ![anaconda](docs/anaconda.png) 
   * Select ***Not installed*** from the dropdown menu.
-[docs/anaconda1.png]
+  ![anaconda1](docs/anaconda1.png)
   * From here, we can search for each of the different packages listed above (in the Packages subsection of the Overview). To download the packages, check the box next to the package and click ***Apply*** at the bottom. Keep in mind that some of these packages may already have come with the full Anaconda installation.
   * Some packages may not be found using the Navigator. In this case, they must be downloaded using ***Anaconda Prompt***. Open the prompt and type the following: `conda install -c anaconda <package_names_space-separated>`.
-[docs/anacondaprompt.png]
+  ![ananconda prompt](docs/anacondaprompt.png)
 
 Note: Alternatively, you can add the packages in the ***Project Interpreter*** section of the project settings in PyCharm. However, this must be done after the project has been opened and the project interpreter has been selected, which will be done in the next few steps.
 
 4.	Open PyCharm and open the project – select the ***hac*** folder in the “Open File or Project” window.
 5.	Select ***File->Settings…*** and select the ***Project Interpreter*** tab on the left. Click on the cog and select ***Add…***.
-[docs/projectinterpreter.png]
+  ![project interpreter](docs/projectinterpreter.png)
   * Click on the ***System Interpreter*** tab on the left and select the location of the python.exe file from your Anaconda/Miniconda installation (most probably found in `C:\Users\<user>\AppData\Local\Continuum\anaconda3\python.exe`).
 
 ## Deployment
@@ -50,7 +50,7 @@ while in the `hac/hactolerance` directory.
 Alternatively, you can run the program directly from the Windows command line, but you must first add python to the PATH variables of the system. Follow the steps [here] (https://superuser.com/questions/143119/how-to-add-python-to-the-windows-path).
 
 A basic GUI will appear with preset/default analysis parameters.
-[docs/hacgui.png]
+![HAC GUI](docs/hacgui.png)
 
 ### Single File Analysis
 The single file analysis function determines which coordinates of the area scan readings are over the specified threshold (dB A/m).
