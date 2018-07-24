@@ -158,9 +158,14 @@ This tests whether the region growing algorithm can appropriately parse all sepa
 This tests whether the region growing algorithm can appropriately parse all separate objects in the contour DataFrame with the correct shapes/dimensions. Note that if this test passes while Region Class tests fail, the results of the test cannot be trusted.
 
 ## Built With
--
+- [openpyxl](https://openpyxl.readthedocs.io/en/stable/)
+- [NumPy](http://www.numpy.org/)
+- [Pandas](https://pandas.pydata.org/)
+- [Matplotlib](https://matplotlib.org/)
+- [WxPython](https://wxpython.org/)
 
 ## Contributing
+[TODO: Add Contributing section]
 
 ## Authors
 - Chang Hwan ‘Oliver’ Choi – *Biomedical Engineering Intern* - [changhwan95](https://github.com/changhwan95)
@@ -173,4 +178,4 @@ Originally developed for the internal use of PCTEST Engineering Labs, Inc.
 - Thomas Rigolage
 - Andrew Harwell
 - PCTEST Engineering Labs, Inc.
-- Billie Thompson (PurpleBooth) for the README template
+- Billie Thompson ([PurpleBooth](https://gist.github.com/PurpleBooth)) for the README template
