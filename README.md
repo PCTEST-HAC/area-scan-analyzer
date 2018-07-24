@@ -1,5 +1,6 @@
 # T-Coil Area Scan Data - Analysis and Visualization Toolkit
 This project was built to facilitate the analysis and visualization of T-Coil area scan results. The program takes ‘.txt’ data files from the T-Coil area scans and generates plots/tables displaying the data and analysis results. The generated results and figures can be exported into ‘.xlsx’ Excel files and separate ‘.png’ image files.
+
 The project was developed in Python 3.6.
 
 ## Getting Started
@@ -65,19 +66,31 @@ A basic GUI will appear with preset/default analysis parameters.
 
 ### Single File Analysis
 The single file analysis function determines which coordinates of the area scan readings are over the specified threshold (dB A/m).
-The analysis takes the raw ‘.txt’ input file specified in the **Input ‘.txt’ File (ABM1 or Single File)** text line. To begin the analysis, click on the **Run** button at the bottom right of the GUI window. Once the analysis has been completed, the plot subsection will display a heatmap built from the original data and a region of interest composed of points greater than or equal to the threshold. The figures and data tables can be exported into an ‘.xlsx’ file. This file will contain a table of power values color formatted to show the region/points within tolerance as well as the maximum power point. The file also has the graphs resulting from the analysis on the GUI. [TODO: Specify the different sheets]
+The analysis takes the raw ‘.txt’ input file specified in the **Input ‘.txt’ File (ABM1 or Single File)** text line.
+
+To begin the analysis, click on the **Run** button at the bottom right of the GUI window. Once the analysis has been completed, the plot subsection will display a heatmap built from the original data and a region of interest composed of points greater than or equal to the threshold.
+
+The figures and data tables can be exported into an ‘.xlsx’ file. This file will contain a table of power values color formatted to show the region/points within tolerance as well as the maximum power point. The file also has the graphs resulting from the analysis on the GUI.
 
 ![single analysis GUI](docs/hacanalysis1.PNG)
 
 ### Dual File Analysis (ABM1, ABM2)
 The dual file analysis function provides a more thorough analysis that includes the signal to noise ratio (ABM1 – ABM2), the sizes and dimensions of the different tolerance regions, the number of tolerance compliant points, etc., as well as visualizations of these results.
-The analysis takes two raw ‘.txt’ files specified in the **Input ‘.txt’ File (ABM1 or Single File)** and **Input ‘.txt’ File (ABM2)** text lines. To begin the analysis, click on the **Run** button at the bottom right of the GUI window – the program will automatically perform the dual file analysis without having to specify it elsewhere in the GUI.
+The analysis takes two raw ‘.txt’ files specified in the **Input ‘.txt’ File (ABM1 or Single File)** and **Input ‘.txt’ File (ABM2)** text lines.
+
+To begin the analysis, click on the **Run** button at the bottom right of the GUI window – the program will automatically perform the dual file analysis without having to specify it elsewhere in the GUI.
+
 The figures and data tables can be exported into an ‘.xlsx’ file and separate png files in a directory. The Excel file will contain a table of ABM1 power values, a table of ABM2 power values, a table of ABM1-ABM2 power ratios, a heatmap table of power ratios, region-colored table of power ratios, and the resulting visualizations fromm the GUI analysis.
 
 ![dual analysis GUI](docs/hacanalysis2.PNG)
 
 ## Running the Tests
-The project comes with automated tests to aid the continued development of the project. All test related files can be found in the `test` directory. To run the tests, simply run `test/test_hactolerance.py` from PyCharm or run `pytest test_hactolerance.py` in the command line. To test a specific test using PyCharm, click inside the test of choice and press `Ctrl + Shift + F10`. To do this from the command line, run `pytest test_hactolerance.py::<testing_function>`.
+The project comes with automated tests to aid the continued development of the project. All test related files can be found in the `test` directory.
+
+To run the tests, simply run `test/test_hactolerance.py` from PyCharm or run `pytest test_hactolerance.py` in the command line.
+
+To test a specific test using PyCharm, click inside the test of choice and press `Ctrl + Shift + F10`. To do this from the command line, run `pytest test_hactolerance.py::<testing_function>`.
+
 It is recommended that the project be tested often during development, as they help ensure that new changes made to the project do not break the current features of the program.
 
 ### Integration Tests
@@ -162,13 +175,14 @@ This tests whether the region growing algorithm can appropriately parse all sepa
 - [NumPy](http://www.numpy.org/)
 - [Pandas](https://pandas.pydata.org/)
 - [Matplotlib](https://matplotlib.org/)
-- [WxPython](https://wxpython.org/)
+- [wxPython](https://wxpython.org/)
 
 ## Contributing
 [TODO: Add Contributing section]
 
 ## Authors
 - Chang Hwan ‘Oliver’ Choi – *Biomedical Engineering Intern* - [changhwan95](https://github.com/changhwan95)
+
 Originally developed for the internal use of PCTEST Engineering Labs, Inc.
 
 ## License
