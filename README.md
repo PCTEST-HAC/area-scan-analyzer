@@ -77,7 +77,7 @@ The figures and data tables can be exported into an ‘.xlsx’ file and separat
 ![dual analysis GUI](docs/hacanalysis2.PNG)
 
 ## Running the Tests
-The project comes with automated tests to aid the continued development of the project. All test related files can be found in the `test` directory. To run the tests, simply run `test/test_hactolerance.py` from PyCharm or run `pytest test_hactolerance.py` in the command line.
+The project comes with automated tests to aid the continued development of the project. All test related files can be found in the `test` directory. To run the tests, simply run `test/test_hactolerance.py` from PyCharm or run `pytest test_hactolerance.py` in the command line. To test a specific test using PyCharm, click inside the test of choice and press `Ctrl + Shift + F10`. To do this from the command line, run `pytest test_hactolerance.py::<testing_function>`.
 It is recommended that the project be tested often during development, as they help ensure that new changes made to the project do not break the current features of the program.
 
 ### Integration Tests
@@ -128,26 +128,36 @@ This test verifies whether the function can build proper DataFrames of a variety
 This test is a trivial test to verify whether the function can handle this edge case. *TODO: may end up removing this test*
 
 ##### test_getcontourdf_toolowthresh()
+This tests the case where the threshold value is smaller than the minimum value in the entire data. For the 'less than' subcase, the test expects an empty (i.e. full of zeros) DataFrame. Otherwise, it expects a full (i.e. full of ones) DataFrame. It tests the basic functionality of the 'less than', 'greater than' arguments in the function.
 
 ##### test_getcontourdf_toohighthresh()
+This is similar the previous test, except that the threshold value tested with is greater than the maxmimum value in the data. Expects an empty DataFrame in the 'greater than' subcase, full DataFrame otherwise.
 
 ##### test_getcontourdf_lthresh_below1()
+This tests the 'less than' case for threshold values below 1 dB A/m. Expects DataFrames with ones in the positions with values below the set threshold, zeros elsewhere. These threshold tests are performed to ensure that the algorithm does not add false positives or true negatives to the contourdf, as the value '1' may be below or above the set thresholds (i.e. the DataFrames must be zeroed out or given ones in the right order to ensure proper isolation of the regions).
 
 ##### test_getcontourdf_lthresh_over1()
+This tests the 'less than' case for threshold values over 1 dB A/m. Expects DataFrames with ones in the positions with values below the set threshold, zeros elsewhere. These threshold tests are performed to ensure that the algorithm does not add false positives or true negatives to the contourdf, as the value '1' may be below or above the set thresholds (i.e. the DataFrames must be zeroed out or given ones in the right order to ensure proper isolation of the regions).
 
 ##### test_getcontourdf_gthresh_below1()
+This tests the 'greater than' case for threshold values below 1 dB A/m. Expects DataFrames with ones in the positions with values over  the set threshold, zeros elsewhere. These threshold tests are performed to ensure that the algorithm does not add false positives or true negatives to the contourdf, as the value '1' may be below or above the set thresholds (i.e. the DataFrames must be zeroed out or given ones in the right order to ensure proper isolation of the regions).
 
 ##### test_getcontourdf_gthresh_over1()
+This tests the 'greater than' case for threshold values over 1 dB A/m. Expects DataFrames with ones in the positions with values over the set threshold, zeros elsewhere. These threshold tests are performed to ensure that the algorithm does not add false positives or true negatives to the contourdf, as the value '1' may be below or above the set thresholds (i.e. the DataFrames must be zeroed out or given ones in the right order to ensure proper isolation of the regions).
 
 ##### test_getregions_unconnected_diamond()
+This test whether the region growing algorithm appropriately separates diagonally-only connected points from each other. The region growing algorithm was implemented with a 4-connected neighborhood to ensure that no irregularly shaped/checkered regions are extracted. Expects a list of four separate points, each for one point of the diamond shape. If the function returns a single diamond, the test will fail. Note that if this test passes while Region Class tests fail, the results of the test cannot be trusted.
 
 ##### test_getregions_triangles()
+This tests whether the region growing algorithm appropriately detects and isolates all triangle shaped-objects. This test verifies whether regions with overlapping rows/columns can be differentiated. Note that if this test passes while Region Class tests fail, the results of the test cannot be trusted.
 
 ##### test_getregions_squares()
+This tests whether the region growing algorithm can appropriately parse all separate square objects in the contour DataFrame. Note that if this test passes while Region Class tests fail, the results of the test cannot be trusted.
 
 ##### test_getregions_multiple()
+This tests whether the region growing algorithm can appropriately parse all separate objects in the contour DataFrame with the correct shapes/dimensions. Note that if this test passes while Region Class tests fail, the results of the test cannot be trusted.
 
-## Packages
+## Built With
 
 ## Contributing
 
