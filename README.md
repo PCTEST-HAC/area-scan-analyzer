@@ -74,6 +74,8 @@ The dual file analysis function provides a more thorough analysis that includes 
 The analysis takes two raw ‘.txt’ files specified in the ***Input ‘.txt’ File (ABM1 or Single File)*** and ***Input ‘.txt’ File (ABM2)*** text lines. To begin the analysis, click on the ***Run*** button at the bottom right of the GUI window – the program will automatically perform the dual file analysis without having to specify it elsewhere in the GUI.
 The figures and data tables can be exported into an ‘.xlsx’ file and separate png files in a directory. [TODO: Specify the different sheets]
 
+![dual analysis GUI](docs/hacanalysis2.PNG)
+
 ## Packages
 
 ## Contributing
