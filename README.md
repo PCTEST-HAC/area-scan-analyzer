@@ -6,11 +6,11 @@ The project was developed in Python 3.6.
 ### Overview
 #### Programs
 -	[Anaconda3/Miniconda3]( https://www.anaconda.com/download/)
-o	Python projects often implement a variety of different third party libraries which, as projects scale up, can be hard to manage in an organized fashion. As a Python distribution, Anaconda provides the core Python language, hundreds of core packages, a variety of different development tools (e.g. IDEs), and ***conda***, Anaconda’s package manager that facilitates the downloading and management of Python packages. 
+  * Python projects often implement a variety of different third party libraries which, as projects scale up, can be hard to manage in an organized fashion. As a Python distribution, Anaconda provides the core Python language, hundreds of core packages, a variety of different development tools (e.g. IDEs), and ***conda***, Anaconda’s package manager that facilitates the downloading and management of Python packages. 
 -	[Python 3.6]( https://www.python.org/downloads/) (included in Anaconda3/Miniconda3)
-o	Python is the main programming language for this project. It has an active open-source community and easily readable code syntax, making Python a great language of choice for projects like these. 
+  * Python is the main programming language for this project. It has an active open-source community and easily readable code syntax, making Python a great language of choice for projects like these. 
 -	An Integrated Development Environment (IDE) supporting Python – [PyCharm]( https://www.jetbrains.com/pycharm/download/) is recommended
-o	While PyCharm is not necessary to run this program, we highly recommend it for Python-based development. It is easy to integrate it with Anaconda and provides fantastic tools/shortcuts/hotkeys that make development faster and easier.
+  * While PyCharm is not necessary to run this program, we highly recommend it for Python-based development. It is easy to integrate it with Anaconda and provides fantastic tools/shortcuts/hotkeys that make development faster and easier.
 
 #### Packages (can be installed using Anaconda):
 -	openpyxl
@@ -26,12 +26,12 @@ o	While PyCharm is not necessary to run this program, we highly recommend it for
 Note: the following steps will show how to set up the environment using Anaconda and PyCharm, but the project is not restricted to these tools exclusively.
 
 3.	We will now install the different packages required to run the scripts.
-o	Open ***Anaconda Navigator*** and click on ***Environments*** tab on the left.
+  * Open ***Anaconda Navigator*** and click on ***Environments*** tab on the left.
 [docs/anaconda.png] 
-o	Select ***Not installed*** from the dropdown menu.
+  * Select ***Not installed*** from the dropdown menu.
 [docs/anaconda1.png]
-o	From here, we can search for each of the different packages listed above (in the Packages subsection of the Overview). To download the packages, check the box next to the package and click ***Apply*** at the bottom. Keep in mind that some of these packages may already have come with the full Anaconda installation.
-o	Some packages may not be found using the Navigator. In this case, they must be downloaded using ***Anaconda Prompt***. Open the prompt and type the following: `conda install -c anaconda <package_names_space-separated>`.
+  * From here, we can search for each of the different packages listed above (in the Packages subsection of the Overview). To download the packages, check the box next to the package and click ***Apply*** at the bottom. Keep in mind that some of these packages may already have come with the full Anaconda installation.
+  * Some packages may not be found using the Navigator. In this case, they must be downloaded using ***Anaconda Prompt***. Open the prompt and type the following: `conda install -c anaconda <package_names_space-separated>`.
 [docs/anacondaprompt.png]
 
 Note: Alternatively, you can add the packages in the ***Project Interpreter*** section of the project settings in PyCharm. However, this must be done after the project has been opened and the project interpreter has been selected, which will be done in the next few steps.
@@ -39,7 +39,7 @@ Note: Alternatively, you can add the packages in the ***Project Interpreter*** s
 4.	Open PyCharm and open the project – select the ***hac*** folder in the “Open File or Project” window.
 5.	Select ***File->Settings…*** and select the ***Project Interpreter*** tab on the left. Click on the cog and select ***Add…***.
 [docs/projectinterpreter.png]
-o	Click on the ***System Interpreter*** tab on the left and select the location of the python.exe file from your Anaconda/Miniconda installation (most probably found in `C:\Users\<user>\AppData\Local\Continuum\anaconda3\python.exe`).
+  * Click on the ***System Interpreter*** tab on the left and select the location of the python.exe file from your Anaconda/Miniconda installation (most probably found in `C:\Users\<user>\AppData\Local\Continuum\anaconda3\python.exe`).
 
 ## Deployment
 Open `hac/hactolerance/hactolerance.py` and click run (green play button at the top right of PyCharm). To run from the command line, open the Anaconda Prompt and enter: 
@@ -72,7 +72,7 @@ Originally developed for the internal use of PCTEST Engineering Labs, Inc.
 ## License
 [TODO: Add all licenses]
 
-## Acknowledgements
+## Ascknowledgements
 •	Thomas
 •	Andrew
 •	PCTEST Engineering Labs, Inc.
