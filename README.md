@@ -6,11 +6,11 @@ The project was developed in Python 3.6.
 ### Overview
 #### Programs
 * [Anaconda3/Miniconda3]( https://www.anaconda.com/download/)
-  * Python projects often implement a variety of different third party libraries which, as projects scale up, can be hard to manage in an organized fashion. As a Python distribution, Anaconda provides the core Python language, hundreds of core packages, a variety of different development tools (e.g. IDEs), and ***conda***, Anaconda’s package manager that facilitates the downloading and management of Python packages. 
-*	[Python 3.6]( https://www.python.org/downloads/) (included in Anaconda3/Miniconda3)
-  * Python is the main programming language for this project. It has an active open-source community and easily readable code syntax, making Python a great language of choice for projects like these. 
+   * Python projects often implement a variety of different third party libraries which, as projects scale up, can be hard to manage in an organized fashion. As a Python distribution, Anaconda provides the core Python language, hundreds of core packages, a variety of different development tools (e.g. IDEs), and ***conda***, Anaconda’s package manager that facilitates the downloading and management of Python packages.
+* [Python 3.6]( https://www.python.org/downloads/) (included in Anaconda3/Miniconda3)
+   * Python is the main programming language for this project. It has an active open-source community and easily readable code syntax, making Python a great language of choice for projects like these. 
 *	An Integrated Development Environment (IDE) supporting Python – [PyCharm]( https://www.jetbrains.com/pycharm/download/) is recommended
-  * While PyCharm is not necessary to run this program, we highly recommend it for Python-based development. It is easy to integrate it with Anaconda and provides fantastic tools/shortcuts/hotkeys that make development faster and easier.
+   * While PyCharm is not necessary to run this program, we highly recommend it for Python-based development. It is easy to integrate it with Anaconda and provides fantastic tools/shortcuts/hotkeys that make development faster and easier.
 
 #### Packages (can be installed using Anaconda):
 -	openpyxl
