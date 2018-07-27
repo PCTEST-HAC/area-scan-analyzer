@@ -100,7 +100,7 @@ The program has a few shortcuts to accelerate the process of analyzing multiple 
 `Ctrl + H` - Open shortcut keys reference
 
 ## In-Depth Analysis Algorithm Description
-Main Functions: `MainFrame.datatodf()`, `'MainFrame.getcontourdf()`, `MainFrame.getregions()`
+Main Functions: `MainFrame.datatodf()`, `MainFrame.getcontourdf()`, `MainFrame.getregions()`
 
 ### Single File Analysis
 Single file analysis begins by converting the raw input data (from the '.txt' file) into a Pandas DataFrame (essentially an array), where all data points are reorganized into their respective coordinates. Note that the data from the automated area scan is collected by zig-zagging through columns, appending each data point into a list of values recorded on a '.txt' file.
