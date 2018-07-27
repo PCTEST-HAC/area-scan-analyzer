@@ -99,6 +99,31 @@ The program has a few shortcuts to accelerate the process of analyzing multiple 
 
 `Ctrl + H` - Open shortcut keys reference
 
+## In-Depth Analysis Algorithm Description
+Main Functions: `MainFrame.datatodf()`, `'MainFrame.getcontourdf()`, `MainFrame.getregions()`
+
+### Single File Analysis
+Single file analysis begins by converting the raw input data (from the '.txt' file) into a Pandas DataFrame (essentially an array), where all data points are reorganized into their respective coordinates. Note that the data from the automated area scan is collected by zig-zagging through columns, appending each data point into a list of values recorded on a '.txt' file.
+
+[TODO: maybe add a picture of this zig-zag scan?]
+
+After organizing the data into a DataFrame, we compare each element in the DataFrame to a threshold value (set prior to running the analysis). A copy of the DataFrame is made and all values within this tolerance limit are set to 1, while all others are set to 0.
+
+On completion, the original DataFrame is plotted as a heatmap, and the region DataFrame (i.e. the DataFrame with 1s for regions within tolerance and 0s for regions outside tolerance) is plotted in black and white.
+
+### Dual File Analysis (ABM1, ABM2)
+Dual file analysis begins by converting the two sets of raw input data (from '.txt' files) into separate Pandas DataFrames (essentially arrays), where all data points are reorganized into their respective coordinates. Note that the data from the automated scan is collected by zig-zagging through columns, appending each data point into a list of values recorded on a '.txt' file.
+
+[TODO: maybe add a picture of this zig-zag scan?]
+
+After organizing the data into DataFrames, we compare each element in the DataFrames to their respective threshold values (set prior to running the analysis). Copies of the DataFrames are made and all values within their respective tolerance limits are set to 1, while all others are set to 0.
+
+We then identify the different regions found within the ABM2 DataFrame. A (region growing)[https://en.wikipedia.org/wiki/Region_growing] algorithm has been implemented to individually extract all separate, contiguous regions from the scan. First, the ABM2 region DataFrame (i.e. the DataFrame with 1s for regeions within tolerance and 0s for regions outside tolerance) is set as a reference point. We select one of the points within the ABM2 tolerance region and check if it has any neighboring points (above, below, right, left). If so, add them to a queue and add the point to a list of indices for the current region. We then move onto the next point on the queue and check that point's neighbors, again adding them to the queue. Once all points of the queue have been gone through, this means we have isolated an individual, contiguous region. We then check the ABM2 region DataFrame to see if there are still any points we have not 'extracted', and we repeat the process.
+
+We then have a list of indices for each region. Each of these is made into its own Region object, which takes these indices and rebuilds an array of their shape. Each of these regions are then checked, column by column, row by row, to determine if these regions fulfill the traversal and longitudinal size requirements.
+
+Once all of this has been completed, the original data from the two input files are plotted as heatmaps, while the region DataFrames are plotted in color-coded fashion (red for secondary region, yellow for primary region, green for the overlapping sections, black elsewhere). A legend indicates the colors for each region and also shows what evaluation requirements have been met or not.
+
 ## Running the Tests
 The project comes with automated tests to aid the continued development of the project. All test related files can be found in the `test` directory.
 
