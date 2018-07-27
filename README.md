@@ -84,6 +84,21 @@ The figures and data tables can be exported into an ‘.xlsx’ file and separat
 
 ![dual analysis GUI](docs/hacanalysis2.PNG)
 
+### Shortcut Keys
+The program has a few shortcuts to accelerate the process of analyzing multiple files.
+
+`Ctrl + 1` - Load file 1
+
+`Ctrl + 2` - load file 2
+
+`Ctrl + R` - Run analysis
+
+`Ctrl + E` - Export analysis results
+
+`Ctrl + W` - Quit program
+
+`Ctrl + H` - Open shortcut keys reference
+
 ## Running the Tests
 The project comes with automated tests to aid the continued development of the project. All test related files can be found in the `test` directory.
 
